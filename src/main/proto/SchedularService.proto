@@ -1,0 +1,12 @@
+syntax = "proto3";
+package com.github.cronjob;
+
+option java_package = "com.github.cronjob.protocol.service";
+option java_outer_classname = "SchedularService";
+option java_multiple_files = true;
+
+import "SchedularMessage.proto";
+
+service JobExecuter {
+    rpc execute (ExecuteRequest) returns (ExecuteResult);
+}

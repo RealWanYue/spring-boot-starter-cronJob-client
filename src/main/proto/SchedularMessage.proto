@@ -1,0 +1,21 @@
+syntax = "proto3";
+package com.github.cronjob;
+
+option java_package = "com.github.cronjob.protocol.entity";
+option java_outer_classname = "SchedularEntity";
+option java_multiple_files = true;
+
+message ExecuteRequest {
+    string handlerName = 1; //执行器名称
+    bool serial = 2; //是否串行
+    int32 executeTimeout = 3; //超时时间
+    string parameter = 4; //执行参数
+}
+
+message ExecuteResult {
+    string message = 1; //执行结果
+    bool success = 2; //是否成功
+    string err = 3; //错误
+    string startTime = 4; //实际开启时间
+    string endTime = 5; //实际结束时间
+}

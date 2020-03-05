@@ -16,7 +16,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 public class CronJobProperties {
     public static final String PREFIX = "cron.job";
 
-    private boolean enable;
+    private boolean enabled;
     /**
      * etcd url
      */

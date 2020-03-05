@@ -18,6 +18,7 @@ import io.grpc.Server;
 import io.grpc.netty.NettyServerBuilder;
 import io.grpc.stub.StreamObserver;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.web.ServerProperties;
 import org.springframework.stereotype.Component;
@@ -38,7 +39,6 @@ import java.util.concurrent.TimeUnit;
  * @Description: 启动
  * @Modified: By：
  */
-@Component
 @Slf4j
 public class JobServer implements Runnable, CommandLineRunner {
     /**
@@ -52,7 +52,7 @@ public class JobServer implements Runnable, CommandLineRunner {
     @Resource
     private Client client;
 
-    @Resource
+    @Autowired
     private MultiJob multiJob;
 
     @Resource

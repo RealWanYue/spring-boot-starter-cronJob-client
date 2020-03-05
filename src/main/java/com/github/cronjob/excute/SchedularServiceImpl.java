@@ -17,7 +17,6 @@ import javax.annotation.Resource;
  * @Description:
  * @Modified: By：
  */
-@Component(value = "schedularService")
 public class SchedularServiceImpl extends AbstractJobExecuter {
 
     @Resource

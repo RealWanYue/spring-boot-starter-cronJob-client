@@ -14,8 +14,6 @@ import javax.annotation.Resource;
  * @Description: 生成Etcd Client
  * @Modified: By：
  */
-@Component
-@EnableConfigurationProperties(CronJobProperties.class)
 public class EtcdClientFactoryBean extends AbstractFactoryBean<Client> {
 
     @Resource
